@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Card from '../components/Card.astro';
+import Footer from '../components/Footer.astro';
+
+const features = [
+  {
+    title: 'Astro v5',
+    body: 'A modern web framework with islands architecture for building fast, content-focused websites.',
+    href: 'https://astro.build',
+  },
+  {
+    title: 'Tailwind CSS v4',
+    body: 'A utility-first CSS framework for rapid UI development with minimal CSS.',
+    href: 'https://tailwindcss.com',
+  },
+  {
+    title: 'TypeScript',
+    body: 'Enhance your developer experience with static type-checking and rich editor integrations.',
+    href: 'https://www.typescriptlang.org',
+  }
+];
+---
+
+<Layout title="Astro + Tailwind + TypeScript">
+  <Header />
+  <main>
+    <Hero 
+      title="Astro + Tailwind + TypeScript" 
+      subtitle="A minimal starter template for your next web project"
+      ctaText="Get Started"
+      ctaLink="#features"
+    />
+    
+    <section id="features" class="py-12 px-6 sm:px-8">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center">Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {features.map(feature => (
+            <Card 
+              title={feature.title}
+              body={feature.body}
+              href={feature.href}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

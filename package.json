@@ -1,0 +1,24 @@
+{
+  "name": "astro-tailwind-typescript",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A minimal template for Astro with Tailwind CSS and TypeScript",
+  "author": "Your Name",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.0.0",
+    "tailwindcss": "^4.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
